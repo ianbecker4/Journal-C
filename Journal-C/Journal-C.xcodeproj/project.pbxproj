@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BAB246324E1E06500276DC6 /* IRBEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB246224E1E06500276DC6 /* IRBEntry.m */; };
+		4BAB246724E1E48800276DC6 /* IRBEntryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB246624E1E48800276DC6 /* IRBEntryController.m */; };
+		4BAB246D24E1F3A700276DC6 /* IRBEntryListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB246C24E1F3A700276DC6 /* IRBEntryListTableViewController.m */; };
+		4BAB247024E1F3EC00276DC6 /* IRBEntryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAB246F24E1F3EC00276DC6 /* IRBEntryDetailViewController.m */; };
 		7E76616124E17A4300EBE53D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E76616024E17A4300EBE53D /* AppDelegate.swift */; };
 		7E76616324E17A4300EBE53D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E76616224E17A4300EBE53D /* SceneDelegate.swift */; };
 		7E76616824E17A4300EBE53D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E76616624E17A4300EBE53D /* Main.storyboard */; };
@@ -15,6 +19,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BAB246124E1E06500276DC6 /* IRBEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRBEntry.h; sourceTree = "<group>"; };
+		4BAB246224E1E06500276DC6 /* IRBEntry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRBEntry.m; sourceTree = "<group>"; };
+		4BAB246524E1E48800276DC6 /* IRBEntryController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRBEntryController.h; sourceTree = "<group>"; };
+		4BAB246624E1E48800276DC6 /* IRBEntryController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRBEntryController.m; sourceTree = "<group>"; };
+		4BAB246B24E1F3A700276DC6 /* IRBEntryListTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRBEntryListTableViewController.h; sourceTree = "<group>"; };
+		4BAB246C24E1F3A700276DC6 /* IRBEntryListTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRBEntryListTableViewController.m; sourceTree = "<group>"; };
+		4BAB246E24E1F3EC00276DC6 /* IRBEntryDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRBEntryDetailViewController.h; sourceTree = "<group>"; };
+		4BAB246F24E1F3EC00276DC6 /* IRBEntryDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IRBEntryDetailViewController.m; sourceTree = "<group>"; };
 		7E76615D24E17A4300EBE53D /* Journal-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Journal-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E76616024E17A4300EBE53D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E76616224E17A4300EBE53D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +47,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BAB246424E1E46E00276DC6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BAB246124E1E06500276DC6 /* IRBEntry.h */,
+				4BAB246224E1E06500276DC6 /* IRBEntry.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BAB246824E1E48E00276DC6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4BAB246A24E1F33900276DC6 /* ViewController */,
+				4BAB246924E1E49700276DC6 /* ModelController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		4BAB246924E1E49700276DC6 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				4BAB246524E1E48800276DC6 /* IRBEntryController.h */,
+				4BAB246624E1E48800276DC6 /* IRBEntryController.m */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		4BAB246A24E1F33900276DC6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				4BAB246B24E1F3A700276DC6 /* IRBEntryListTableViewController.h */,
+				4BAB246C24E1F3A700276DC6 /* IRBEntryListTableViewController.m */,
+				4BAB246E24E1F3EC00276DC6 /* IRBEntryDetailViewController.h */,
+				4BAB246F24E1F3EC00276DC6 /* IRBEntryDetailViewController.m */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		7E76615424E17A4300EBE53D = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +106,8 @@
 			children = (
 				7E76617424E17A5500EBE53D /* Resources */,
 				7E76616624E17A4300EBE53D /* Main.storyboard */,
+				4BAB246424E1E46E00276DC6 /* Model */,
+				4BAB246824E1E48E00276DC6 /* Controllers */,
 			);
 			path = "Journal-C";
 			sourceTree = "<group>";
@@ -98,12 +150,14 @@
 		7E76615524E17A4300EBE53D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = IRB;
 				LastSwiftUpdateCheck = 1160;
 				LastUpgradeCheck = 1160;
 				ORGANIZATIONNAME = "Cameron Stuart";
 				TargetAttributes = {
 					7E76615C24E17A4300EBE53D = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 				};
 			};
@@ -144,6 +198,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E76616124E17A4300EBE53D /* AppDelegate.swift in Sources */,
+				4BAB246D24E1F3A700276DC6 /* IRBEntryListTableViewController.m in Sources */,
+				4BAB246324E1E06500276DC6 /* IRBEntry.m in Sources */,
+				4BAB246724E1E48800276DC6 /* IRBEntryController.m in Sources */,
+				4BAB247024E1F3EC00276DC6 /* IRBEntryDetailViewController.m in Sources */,
 				7E76616324E17A4300EBE53D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Journal-C/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -296,6 +355,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.CameronStuart.Journal-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,6 +365,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Journal-C/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
