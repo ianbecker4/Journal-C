@@ -11,13 +11,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface IRBEntryDetailViewController : UIViewController <UITextFieldDelegate>
+@interface IRBEntryDetailViewController : UIViewController
 
 @property (strong, nonatomic) IRBEntry * entry;
-
-@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
-@property (weak, nonatomic) IBOutlet UITextView *bodyTextView;
-
 
 @end
 

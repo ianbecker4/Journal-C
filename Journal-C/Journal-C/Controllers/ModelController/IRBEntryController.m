@@ -23,22 +23,32 @@
     return sharedInstance;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _entries = [NSMutableArray new];
+    }
+    return  self;
+}
+
 - (void)addEntryWithTitle:(NSString *)title bodyText:(NSString *)bodyText
 {
-    NSMutableArray * arrayOfEntries = _entries;
-    [arrayOfEntries addObject:_entries];
+    IRBEntry * newEntry = [[IRBEntry alloc] initWithTitle:title bodytext:bodyText];
+    
+    [_entries addObject:newEntry];
 }
 
 - (void)removeEntry:(IRBEntry *)entry
 {
-    for (entry in _entries) {
-        
-    }
+    [_entries removeObject:entry];
 }
 
 - (void)updateEntry:(IRBEntry *)entry title:(NSString *)title bodyText:(NSString *)bodyText
 {
-    
+    entry.title = title;
+    entry.bodyText = bodyText;
+    entry.timestamp = [NSDate date];
 }
 
 @end

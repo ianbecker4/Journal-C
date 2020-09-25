@@ -20,6 +20,11 @@ NS_ASSUME_NONNULL_BEGIN
                       bodyText:(NSString *)bodyText
                      timestamp:(NSDate *)timestamp;
 
+- (instancetype)initWithTitle:(NSString *)title bodytext:(NSString *)bodyText;
+
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (NSDictionary *)dictionaryCopy;
+
 @end
 
 NS_ASSUME_NONNULL_END

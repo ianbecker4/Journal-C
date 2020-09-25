@@ -10,7 +10,11 @@
 #import "IRBEntryController.h"
 #import "IRBEntry.h"
 
-@interface IRBEntryDetailViewController ()
+@interface IRBEntryDetailViewController () <UITextFieldDelegate>
+
+
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (weak, nonatomic) IBOutlet UITextView *bodyTextView;
 
 @end
 
@@ -18,8 +22,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _titleTextField.delegate = self;
     
+    [self updateViews];
+}
+
+- (void)updateViews
+{
+    if (!self.entry) return;
+    
+    self.titleTextField.text = self.entry.title;
+    self.bodyTextView.text = self.entry.bodyText;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
@@ -44,25 +56,22 @@
 }
 
 - (IBAction)saveButtonTapped:(id)sender {
-    IRBEntry * entry;
-    if (entry) {
-        _titleTextField.text = entry.title;
-        _bodyTextView.text = entry.bodyText;
+    if (self.entry) {
+        [[IRBEntryController sharedInstance] updateEntry:self.entry title:self.titleTextField.text bodyText:self.bodyTextView.text];
     } else {
-        
+        [[IRBEntryController sharedInstance] addEntryWithTitle:self.titleTextField.text bodyText:self.bodyTextView.text];
     }
-    [self dismissViewControllerAnimated:true completion:NULL];
+    [self dismissViewControllerAnimated:YES completion:^{
+        [self.navigationController popToRootViewControllerAnimated:YES];
+    }];
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)setEntry:(IRBEntry *)entry
+{
+    if (entry != _entry) {
+        _entry = entry;
+        [self updateViews];
+    }
 }
-*/
 
 @end
